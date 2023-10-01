@@ -2,10 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./Navbar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRightFromBracket, faArrowRightToBracket, faCoffee, faFilePen, faHouseChimney } from '@fortawesome/free-solid-svg-icons'
-import Home from '../Home/Home'
+import { faArrowRightFromBracket, faArrowRightToBracket, faFilePen, faHouseChimney } from '@fortawesome/free-solid-svg-icons'
 
-const Navbar = () => {
+const Navbar = ({isAuth}) => {
   return (
     <nav>
       <Link to="/">
@@ -14,12 +13,12 @@ const Navbar = () => {
       <Link to="/createpost">
         <FontAwesomeIcon icon={faFilePen}/>
         新規投稿</Link>
-      <Link to="/login">
+      {/* isAuthがfalseのときだけlogin画面を表示させる */}
+      {!isAuth ? <Link to="/login">
         <FontAwesomeIcon icon={faArrowRightFromBracket}/>
-        ログイン</Link>
-      <Link to="/logout">
+        ログイン</Link> : <Link to="/logout">
         <FontAwesomeIcon icon={faArrowRightToBracket}/>
-        ログアウト</Link>
+        ログアウト</Link> }
     </nav>
   )
 }
