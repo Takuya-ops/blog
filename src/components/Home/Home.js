@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Home.css"
 
 const Home = () => {
   return (
@@ -7,13 +8,22 @@ const Home = () => {
         <div className='postHeader'>
           <h1>タイトル</h1>
         </div>
-      </div>
-      <div className="postTextContainer">
-        今はReactを学習中です。これからフリーランスのReactエンジニアとして働いていきたいです。
-      </div>
-      <div className="nameAndDeleteButton">
-        <h3>@tacode</h3>
-        <button>削除</button>
+        <div className="postTextContainer">
+          今はReactを学習中です。これからフリーランスのReactエンジニアとして働いていきたいです。
+          今はReactを学習中です。これからフリーランスのReactエンジニアとして働いていきたいです。
+          今はReactを学習中です。これからフリーランスのReactエンジニアとして働いていきたいです。
+          今はReactを学習中です。これからフリーランスのReactエンジニアとして働いていきたいです。
+          今はReactを学習中です。これからフリーランスのReactエンジニアとして働いていきたいです。
+          今はReactを学習中です。これからフリーランスのReactエンジニアとして働いていきたいです。
+          今はReactを学習中です。これからフリーランスのReactエンジニアとして働いていきたいです。
+          今はReactを学習中です。これからフリーランスのReactエンジニアとして働いていきたいです。
+          今はReactを学習中です。これからフリーランスのReactエンジニアとして働いていきたいです。
+          今はReactを学習中です。これからフリーランスのReactエンジニアとして働いていきたいです。
+        </div>
+        <div className="nameAndDeleteButton">
+          <h3>@tacode</h3>
+          <button>削除</button>
+        </div>
       </div>
     </div>
   )
