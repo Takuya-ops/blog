@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./CreatePost.css"
 import { addDoc, collection } from 'firebase/firestore'
 import { auth, db } from '../../firebase'
 // リダイレクト
 import { useNavigate } from 'react-router-dom'
 
-const CreatePost = () => {
+const CreatePost = ({isAuth}) => {
   const [title, setTitle] = useState()
   const [postText, setPostText] = useState()
 
@@ -23,6 +23,14 @@ const CreatePost = () => {
     // どのエンドポイントに飛ばすか？
     navigate("/")
   }
+
+  // ログインしていない場合はログイン画面にリダイレクトさせる
+  useEffect(() => {
+    if (!isAuth) {
+      navigate("/login")
+    }
+  }, []);
+
   return (
     <div className='createPostPage'>
       <div className="postContainer">
